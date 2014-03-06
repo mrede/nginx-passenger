@@ -13,6 +13,7 @@
 
   		
   		"recipe[database]",
+  		"recipe[git]"
   		"recipe[guff::default]"
     ],
     "nginx": {
