@@ -1,0 +1,5 @@
+preseed/runit/runit-2.1.1-6.2ubuntu2.1.seed
+remote_file/http___nginx_org_download_nginx_1_4_4_tar_gz-2cdf0b18e47d173fbc09c0f180ec9954.json
+remote_file/http___nodejs_org_dist_v0_10_15_node_v0_10_15_tar_gz-d2e617cd33012de681c54f2eeecb9982.json
+chef-client-running.pid
+chef-stacktrace.out

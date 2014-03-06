@@ -1,0 +1,39 @@
+{
+	"cookbook_path": [ "cookbooks/", "~/.berkshelf/cookbooks/"],
+    "run_list": [ 
+    	"recipe[guff::default]" ,
+    	"recipe[build-essential]",
+  		"recipe[ubuntu]",
+  		
+
+  
+  		"recipe[mysql::ruby]",
+  		"recipe[nodejs]",
+  		"recipe[nginx::source]",
+
+  		
+  		"recipe[database]"
+
+    ],
+    "nginx": {
+	    "version": "1.4.4",
+	    "dir": "/etc/nginx",
+	    "log_dir": "/var/log/nginx",
+	    "binary": "/opt/nginx-1.4.4/sbin",
+	    "user": "develop",
+	    "init_style": "init",
+	    "source": {
+	        "modules": [
+	            "nginx::http_stub_status_module",
+	            
+	            "nginx::http_gzip_static_module",
+	            "nginx::passenger"
+	        ]
+	    },
+	    "passenger": {
+	        "version": "3.0.21",
+	        "ruby": "/usr/bin/ruby",
+	        "root": "/var/lib/gems/1.9.1/gems/passenger-3.0.21"
+	    }
+	}
+}
