@@ -1,0 +1,14 @@
+server {
+        listen 80;
+        server_name  dev.guff.me.uk;
+
+        root /home/http/dev.guff.me.uk/;
+        passenger_enabled on;
+
+        location  /  {
+            passenger_enabled on;
+        }
+
+        rails_env development;
+
+    }

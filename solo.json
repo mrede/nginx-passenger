@@ -1,7 +1,7 @@
 {
 	"cookbook_path": [ "cookbooks/", "~/.berkshelf/cookbooks/"],
     "run_list": [ 
-    	"recipe[guff::default]" ,
+    	
     	"recipe[build-essential]",
   		"recipe[ubuntu]",
   		
@@ -12,8 +12,8 @@
   		"recipe[nginx::source]",
 
   		
-  		"recipe[database]"
-
+  		"recipe[database]",
+  		"recipe[guff::default]"
     ],
     "nginx": {
 	    "version": "1.4.4",
@@ -30,10 +30,15 @@
 	            "nginx::passenger"
 	        ]
 	    },
+	    "app": {
+	      "name": "dev.guff.me.uk",
+	      "web_dir": "/var/data/www/dev.guff.me.uk"
+	    },
 	    "passenger": {
 	        "version": "3.0.21",
 	        "ruby": "/usr/bin/ruby",
 	        "root": "/var/lib/gems/1.9.1/gems/passenger-3.0.21"
 	    }
 	}
+
 }

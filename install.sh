@@ -14,7 +14,7 @@ if ! test -f "$chef_binary"; then
     # Install Ruby and Chef
     aptitude install -y ruby1.9.3 ruby1.9.1-dev make &&
     sudo gem1.9.1 install --no-rdoc --no-ri chef 
-    sudo gem1.9.1 install --no-rdoc --no-ri chef berkshelf
+    sudo gem1.9.1 install --no-rdoc --no-ri berkshelf
 fi &&
 
 berks install
