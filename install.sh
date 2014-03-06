@@ -17,6 +17,6 @@ if ! test -f "$chef_binary"; then
     sudo gem1.9.1 install --no-rdoc --no-ri berkshelf
 fi &&
 
-berks install
+berks install --path vendor/cookbooks
 
 "$chef_binary" -c solo.rb -j solo.json
