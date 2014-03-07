@@ -5,7 +5,14 @@
 
 # Create /home/http
 directory "/home/http" do
-  owner "develop"
+  owner "label"
+  group "root"
+  mode 00644
+  action :create
+end
+
+directory "/home/http/dev.guff.me.uk" do
+  owner "label"
   group "root"
   mode 00644
   action :create
