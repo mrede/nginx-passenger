@@ -6,7 +6,7 @@
   		"recipe[ubuntu]",
   		
 
-  
+  		"recipe[mysql::server]",
   		"recipe[mysql::ruby]",
   		"recipe[nodejs]",
   		"recipe[nginx::source]",
@@ -40,6 +40,11 @@
 	        "ruby": "/usr/bin/ruby",
 	        "root": "/var/lib/gems/1.9.1/gems/passenger-3.0.21"
 	    }
+	},
+	"mysql": {
+		"server_root_password": "iloverandompasswordsbutthiswilldo",
+    	"server_repl_password": "iloverandompasswordsbutthiswilldo",
+    	"server_debian_password": "iloverandompasswordsbutthiswilldo"
 	}
 
 }
