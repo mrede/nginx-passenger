@@ -7,14 +7,14 @@
 directory "/home/http" do
   owner "label"
   group "root"
-  mode 00644
+  mode 00755
   action :create
 end
 
 directory "/home/http/dev.guff.me.uk" do
   owner "label"
   group "root"
-  mode 00644
+  mode 00755
   action :create
 end
 
